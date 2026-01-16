@@ -85,7 +85,7 @@
     const GOOGLE_SHEET_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSkjxOU1n8HQIPibg68ryDiZuQLToFX2zrOoerLQ4TTWnM1-jVTytmTYIe_o_9CRlQvqOF50ICM6PHU/pub?gid=0&single=true&output=csv";
     const apiKey = ""; 
 
-    // --- Mock Data ---
+    // --- Mock Data (Minimal Fallback) ---
     const MOCK_DATA = [
       { "ชื่อ-สกุล": "ตัวอย่าง ข้อมูล", "HN": "00001", "อายุ": "30", "ที่อยู่": "ต.กุสุมาลย์", "วันที่ admit": "01/01/2024", "การรับประทานยา": "ต่อเนื่อง", "ผู้ดูแล": "บิดา", "สถานะ": "ปกติ" }
     ];
@@ -395,16 +395,16 @@
                       ทั้งหมด {stats.readmitList.length} คน
                     </p>
                   </div>
-                  <div className="overflow-x-auto">
+                  <div className="max-h-[600px] overflow-y-auto custom-scrollbar">
                     <table className="w-full text-sm text-left">
-                      <thead className="text-xs text-rose-700 uppercase bg-rose-100/50">
+                      <thead className="text-sm text-rose-700 uppercase bg-rose-100/50">
                         <tr>
                           <th className="px-2 py-3 font-bold text-center w-24">Re-admit</th>
-                          <th className="px-6 py-3 text-left whitespace-nowrap">ชื่อ-สกุล</th>
-                          <th className="px-6 py-3 text-left">ที่อยู่</th>
-                          <th className="px-6 py-3 text-left">การกินยา</th>
-                          <th className="px-6 py-3 text-left">ผู้ดูแล</th>
-                          <th className="px-6 py-3 text-left">สถานะล่าสุด</th>
+                          <th className="px-6 py-3 text-center whitespace-nowrap">ชื่อ-สกุล</th>
+                          <th className="px-6 py-3 text-center">ที่อยู่</th>
+                          <th className="px-6 py-3 text-center">การกินยา</th>
+                          <th className="px-6 py-3 text-center">ผู้ดูแล</th>
+                          <th className="px-6 py-3 text-center">สถานะล่าสุด</th>
                         </tr>
                       </thead>
                       <tbody>
